@@ -6,7 +6,9 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance; // creating an instance/variable of this script, meaning we can access it from any other script
 
-    public float waitToRespawn;
+    public float waitToRespawn; // used to determine the wait time to respawn
+
+    public int emeraldsCollected; // used in pickup script to add onto this value of emeralds collected
 
     // Awake is called just before the Start function
     private void Awake() 

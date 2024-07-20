@@ -47,6 +47,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Effects
+    uniqueID: 864852319
+    locked: 0
+  - name: Pickups
+    uniqueID: 553126493
+    locked: 0
+  - name: Enemies
+    uniqueID: 3297037555
+    locked: 0
   - name: Player
     uniqueID: 2249914137
     locked: 0

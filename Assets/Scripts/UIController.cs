@@ -14,6 +14,8 @@ public class UIController : MonoBehaviour
 
     public Sprite heartFull, heartEmpty, heartHalf; // sprites for full heart and empty heart
 
+    public Text emeraldText;
+
     // Awake is called just before the Start function
     private void Awake() 
     {
@@ -23,7 +25,7 @@ public class UIController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        UpdateEmeraldCount(); // call this function to zero the emerald count number on top right of screen
     }
 
     // Update is called once per frame
@@ -94,5 +96,12 @@ public class UIController : MonoBehaviour
 
                 break; // end of default
         }
+    }
+
+    // call this to update the amount of emeralds we have on screen
+    public void UpdateEmeraldCount()
+    {
+        // go to the EmeraldText object in the scene, access the Text element, convert the int value to a string
+        emeraldText.text = LevelManager.instance.emeraldsCollected.ToString();
     }
 }

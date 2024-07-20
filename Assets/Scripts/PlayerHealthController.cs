@@ -14,6 +14,8 @@ public class PlayerHealthController : MonoBehaviour
 
     private SpriteRenderer SR; // variable used to access sprite renderer component, we'll be using this to change the color of the player when he's invincible
 
+    public GameObject deathEffect; // reference to the death effect
+
     // Awake is called just before the Start function
     private void Awake() 
     {
@@ -56,6 +58,9 @@ public class PlayerHealthController : MonoBehaviour
         {
             currentHealth = 0; // set the players health to zero in case it goes below zero
             //gameObject.SetActive(false); // makes the gameObject(player) disappear
+
+            Instantiate(deathEffect, transform.position, transform.rotation); // instantiate creates a new copy of an object, what object we're copying, what position, what rotation 
+
             LevelManager.instance.RespawnPlayer(); // call the RespawnPlayer function in LevelManager
         }
 
@@ -70,6 +75,21 @@ public class PlayerHealthController : MonoBehaviour
 
         UIController.instance.UpdateHealthDisplay(); // using instance to call the UpdateHealthDisplay() function in UIController script
         }
+    }
+
+    public void HealPlayer()
+    {
+        //currentHealth = maxHealth; // this would make our health instantly go to max, which is not what we want
+
+        currentHealth++; // add one to our current health
+
+        // checking if current health for some reason goes above max health
+        if(currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth; // set current health to our set maximum health
+        }
+
+        UIController.instance.UpdateHealthDisplay(); // update our health being shown on the top right of the screen by calling th UpdateHealthDisplay in UIController script
     }
 
 }
