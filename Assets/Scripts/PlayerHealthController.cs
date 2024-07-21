@@ -35,7 +35,7 @@ public class PlayerHealthController : MonoBehaviour
     {
         if(invincibleCount > 0)
         {
-            invincibleCount -= Time.deltaTime; // take away 1 from invincibleCount every 1 second depending on the frame rate of the game, this allows for a consistent amount instead of just writing -1 or -- 
+            invincibleCount -= Time.deltaTime; // take away 1 from invincibleCount every 1 second depending on frame rate of game, more consistent than just -1 or --
 
             // when the invincible counter reaches zero while the loop above is decreasing the invincible counter value every 1 second
             if(invincibleCount <= 0)

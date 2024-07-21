@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour
     public float knockBackLength, knockBackPower; // how long the knockback will last, how powerful the knockback will be
     private float knockBackCount; // counter to keep track of the length 
 
+    public float bouncePower; // how much we want our player to bounce up in the air
+
     // Awake is called just before the Start function
     private void Awake()
     {
@@ -117,6 +119,11 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(0f, knockBackPower); // update the player y velocity to the value we set the knockBackPower variable to in unity
 
         anim.SetTrigger("hurt"); // activate the hurt animation
+    }
+
+    public void Bounce()
+    {
+        rb.velocity = new Vector2(rb.velocity.x, bouncePower); // tells the rigidbody to move us upwards in the air using the value in the bouncePower variable
     }
     
 }
