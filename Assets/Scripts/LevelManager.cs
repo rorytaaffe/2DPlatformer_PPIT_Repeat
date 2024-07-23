@@ -37,6 +37,7 @@ public class LevelManager : MonoBehaviour
     private IEnumerator RespawnCo()
     {
         PlayerController.insance.gameObject.SetActive(false); // deactivate the player game object
+        AudioManager.instance.PlaySFX(8); // Element 8 is Player Death in Audio Manager component
 
         yield return new WaitForSeconds(waitToRespawn); // yield return is waiting for a value to be true, the value its waiting for is WaitForSeconds which is waiting for waitToRespawn value to end
                                                         // when this line is done waiting, it will move onto the next line below

@@ -42,6 +42,8 @@ public class Stompbox : MonoBehaviour
             {
                 Instantiate(collectible, other.transform.position, other.transform.rotation); // drop the collectible
             }
+
+            AudioManager.instance.PlaySFX(3); // the number passed is the number in the inspector window, so Element 3 is Enemy Explode
         }
 
     }

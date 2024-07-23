@@ -38,6 +38,8 @@ public class Pickup : MonoBehaviour
                 Instantiate(pickupEffect, transform.position, transform.rotation); // instantiate creates a new copy of an object, what object we're copying, what position, what rotation
 
                 UIController.instance.UpdateEmeraldCount(); // call the UpdateEmeraldCount function in UIController using an instance
+
+                AudioManager.instance.PlaySFX(6); // Element 6 is Pickup Emerald in Audio Manager component
             }
 
             // if its a health pickup
@@ -52,6 +54,8 @@ public class Pickup : MonoBehaviour
                     Destroy(gameObject); // remove the emerald game object from the scene
 
                     Instantiate(pickupEffect, transform.position, transform.rotation); // instantiate means create a new copy of an object, what object we're copying, what position, what rotation
+
+                    AudioManager.instance.PlaySFX(7); // Element 7 is Pickup Health in Audio Manager component
                 }
             }
         }

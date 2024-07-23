@@ -71,6 +71,8 @@ public class PlayerHealthController : MonoBehaviour
             SR.color = new Color(SR.color.r, SR.color.g, SR.color.b, .5f); // setting the a value in the sprite renderer component for the player as .5 when they're invincible
 
             PlayerController.insance.KnockBack(); // calling the knockback function in PlayerController script using instance
+
+            AudioManager.instance.PlaySFX(9); // Element 9 is Player Hurt in Audio Manager component
         }
 
         UIController.instance.UpdateHealthDisplay(); // using instance to call the UpdateHealthDisplay() function in UIController script

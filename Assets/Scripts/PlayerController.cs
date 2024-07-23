@@ -68,6 +68,7 @@ public class PlayerController : MonoBehaviour
                 {
                     // make the player jump when you press the Space Bar
                     rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+                    AudioManager.instance.PlaySFX(10); // Element 10 is Player Jump in Audio Manager component
                 }
                 else
                 {
@@ -75,6 +76,7 @@ public class PlayerController : MonoBehaviour
                     {
                         rb.velocity = new Vector2(rb.velocity.x, jumpPower);
                         canDoubleJump = false; // canDoubleJump will always be false after we do it once, meaning we cant keep jumping infinitely
+                        AudioManager.instance.PlaySFX(10); // Element 10 is Player Jump in Audio Manager component
                     }
                 }
 
@@ -124,6 +126,7 @@ public class PlayerController : MonoBehaviour
     public void Bounce()
     {
         rb.velocity = new Vector2(rb.velocity.x, bouncePower); // tells the rigidbody to move us upwards in the air using the value in the bouncePower variable
+        AudioManager.instance.PlaySFX(10); // Element 10 is Player Jump in Audio Manager component
     }
     
 }
