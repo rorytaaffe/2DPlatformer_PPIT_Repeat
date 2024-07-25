@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using Microsoft.Unity.VisualStudio.Editor;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI; // using the UI elements of the Unity Engine
-
+using UnityEngine.UI;
+using UnityEngine.UIElements; // using the UI elements of the Unity Engine
 
 public class UIController : MonoBehaviour
 {
@@ -15,6 +15,8 @@ public class UIController : MonoBehaviour
     public Sprite heartFull, heartEmpty, heartHalf; // sprites for full heart and empty heart
 
     public Text emeraldText;
+
+    public GameObject levelCompleteText; // reference to game object
 
     // Awake is called just before the Start function
     private void Awake() 
@@ -31,7 +33,6 @@ public class UIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public void UpdateHealthDisplay()

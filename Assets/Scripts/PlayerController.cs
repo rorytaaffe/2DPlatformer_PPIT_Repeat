@@ -30,6 +30,8 @@ public class PlayerController : MonoBehaviour
 
     public float bouncePower; // how much we want our player to bounce up in the air
 
+    public bool stopInput;
+
     // Awake is called just before the Start function
     private void Awake()
     {
@@ -46,68 +48,71 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // all the player controls will be allowed to happen as long as the knockback counter is less than zero, or that a knockback isnt happening
-        if(knockBackCount <= 0)
+        // if the game isnt paused && we havent said to stop input
+        if(!PauseMenu.instance.isPaused && !stopInput)
         {
-
-            rb.velocity = new Vector2(moveSpeed * Input.GetAxis("Horizontal"), rb.velocity.y); // applying velocity, Input.GetAxisRaw("Horizontal") allows us to use the arrow keys to move , moveSpeed = the X axis, rb.velocity.y = Y axis, only updating the X in this line
-
-            isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround); // going to create an imaginary circle at the player's feet that we'll use to determine whether we're on the ground
-
-            // if we're on the ground
-            if(isGrounded)
+            // all the player controls will be allowed to happen as long as the knockback counter is less than zero, or that a knockback isnt happening
+            if(knockBackCount <= 0)
             {
-                canDoubleJump = true; // we can double jump
-            }
+                rb.velocity = new Vector2(moveSpeed * Input.GetAxis("Horizontal"), rb.velocity.y); // applying velocity, Input.GetAxisRaw("Horizontal") allows us to use the arrow keys to move , moveSpeed = the X axis, rb.velocity.y = Y axis, only updating the X in this line
 
-            // check if the Jump button is pressed, we know it's Space by going to Edit , Project Settings , Input Manager , Axis , Jump
-            // GetButtonDown is the first moment the button is pressed
-            if(Input.GetButtonDown("Jump"))
-            {
+                isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround); // going to create an imaginary circle at the player's feet that we'll use to determine whether we're on the ground
+
+                // if we're on the ground
                 if(isGrounded)
                 {
-                    // make the player jump when you press the Space Bar
-                    rb.velocity = new Vector2(rb.velocity.x, jumpPower);
-                    AudioManager.instance.PlaySFX(10); // Element 10 is Player Jump in Audio Manager component
+                    canDoubleJump = true; // we can double jump
                 }
-                else
+
+                // check if the Jump button is pressed, we know it's Space by going to Edit , Project Settings , Input Manager , Axis , Jump
+                // GetButtonDown is the first moment the button is pressed
+                if(Input.GetButtonDown("Jump"))
                 {
-                    if(canDoubleJump)
+                    if(isGrounded)
                     {
+                        // make the player jump when you press the Space Bar
                         rb.velocity = new Vector2(rb.velocity.x, jumpPower);
-                        canDoubleJump = false; // canDoubleJump will always be false after we do it once, meaning we cant keep jumping infinitely
                         AudioManager.instance.PlaySFX(10); // Element 10 is Player Jump in Audio Manager component
                     }
+                    else
+                    {
+                        if(canDoubleJump)
+                        {
+                            rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+                            canDoubleJump = false; // canDoubleJump will always be false after we do it once, meaning we cant keep jumping infinitely
+                            AudioManager.instance.PlaySFX(10); // Element 10 is Player Jump in Audio Manager component
+                        }
+                    }
+
                 }
 
+                // if you're pressing the left arrow key
+                if(rb.velocity.x < 0)
+                {
+                    sr.flipX = true; // flip the player to the left
+                }
+                // if you're pressing the right arrow key
+                else if (rb.velocity.x > 0)
+                {
+                    sr.flipX = false; // flip the player to the right
+                }
             }
+            // if the knockback counter is more than zero, or that a knockback is happening
+            else
+            {
+                knockBackCount -= Time.deltaTime; // make the knockback counters value decrease
 
-            // if you're pressing the left arrow key
-            if(rb.velocity.x < 0)
-            {
-                sr.flipX = true; // flip the player to the left
-            }
-            // if you're pressing the right arrow key
-            else if (rb.velocity.x > 0)
-            {
-                sr.flipX = false; // flip the player to the right
-            }
-        }
-        // if the knockback counter is more than zero, or that a knockback is happening
-        else
-        {
-            knockBackCount -= Time.deltaTime; // make the knockback counters value decrease
-
-            // knockback the player depending on which way the player is facing, send them in the opposite direction away from the danger
-            // if we're facing to the right, this is a shorter way of typing sr.flipX == false
-            if(!sr.flipX)
-            {
-                rb.velocity = new Vector2(-knockBackPower, rb.velocity.y); // updating rigidbody velocity of player, send player to the left by (-) the knockBackPower to the x value
-            }
-            // if we're facing left, this is a shorter way of typing sr.flipX == true 
-            else if(sr.flipX)
-            {
-                rb.velocity = new Vector2(knockBackPower, rb.velocity.y); // send the player to the right by (+) the knockBackPower to the x value
+                // knockback the player depending on which way the player is facing, send them in the opposite direction away from the danger
+                // if we're facing to the right, this is a shorter way of typing sr.flipX == false
+                if(!sr.flipX)
+                {
+                    rb.velocity = new Vector2(-knockBackPower, rb.velocity.y); // updating rigidbody velocity of player, send player to the left by (-) the knockBackPower to the x value
+                }
+                // if we're facing left, this is a shorter way of typing sr.flipX == true 
+                else if(sr.flipX)
+                {
+                    rb.velocity = new Vector2(knockBackPower, rb.velocity.y); // send the player to the right by (+) the knockBackPower to the x value
+                }
             }
         }
 

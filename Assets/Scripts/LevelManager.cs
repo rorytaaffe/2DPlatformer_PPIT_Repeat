@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; // allows us to load scenes
 
 public class LevelManager : MonoBehaviour
 {
@@ -9,6 +11,8 @@ public class LevelManager : MonoBehaviour
     public float waitToRespawn; // used to determine the wait time to respawn
 
     public int emeraldsCollected; // used in pickup script to add onto this value of emeralds collected
+
+    public String levelToload; // what level we want to load
 
     // Awake is called just before the Start function
     private void Awake() 
@@ -49,6 +53,25 @@ public class LevelManager : MonoBehaviour
         // tell the PlayerHealthController to refill the players health
         PlayerHealthController.instance.currentHealth = PlayerHealthController.instance.maxHealth; // set the current health of player to max health using instances
         // update UI to show the health has been refilled
-        UIController.instance.UpdateHealthDisplay(); // calls the UpdateHealthDisplay which fills up the 3 heart sprites at the top of the screen
+        UIController.instance.UpdateHealthDisplay(); // calls UpdateHealthDisplay function which fills up the 3 heart sprites at the top of the screen
+    }
+
+    public void EndLevel()
+    {
+        StartCoroutine(EndLevelCo()); // calling the EndLevelCo Coroutine function
+    }
+
+    // Coroutine, special function that performs time-based operations, runs on its own time outside the other normal functions , asynchronous so it runs independently from the main program flow
+    public IEnumerator EndLevelCo()
+    {
+       PlayerController.insance.stopInput = true; // as soon as we hit the flag stop input
+
+       CameraController.instance.stopFollow = true; // tell the camera to stop following the player
+
+       UIController.instance.levelCompleteText.SetActive(true); // put level complete text on screen
+
+       yield return new WaitForSeconds(3.5f); // yield return is waiting for a value to be true, the value its waiting for is 3.5 seconds
+
+       SceneManager.LoadScene(levelToload); // load the specified scene
     }
 }

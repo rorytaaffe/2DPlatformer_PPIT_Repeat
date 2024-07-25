@@ -10,10 +10,15 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource backGroundMusic, levelEndMusic; // background music, end of level music
 
+    private void Awake() 
+    {
+        instance = this; // instance = this current component / script , so the variable instance is = AudioManager
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        instance = this; // instance = this current component / script , so the variable instance is = AudioManager
+        
     }
 
     // Update is called once per frame

@@ -20,7 +20,7 @@ public class Checkpoint : MonoBehaviour
         
     }
 
-    
+    // trigger function
     private void OnTriggerEnter2D(Collider2D other) 
     {
         // if the player enters the trigger area
