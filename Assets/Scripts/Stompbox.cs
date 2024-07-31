@@ -7,7 +7,7 @@ public class Stompbox : MonoBehaviour
     public GameObject deathEffect; // will instantiate after enemy death
 
     public GameObject collectible; // item we want the enemy to drop
-    [Range(0, 100)]public float chanceToDrop; // float within the range of 0 and 100 
+    //[Range(0, 100)]public float chanceToDrop; // float within the range of 0 and 100 , used to randomize the drop rate 
 
     // Start is called before the first frame update
     void Start()
@@ -36,12 +36,17 @@ public class Stompbox : MonoBehaviour
 
             PlayerController.insance.Bounce(); // call the Bounce function in PlayerController using instanc
 
+            Instantiate(collectible, other.transform.position, other.transform.rotation); // drop the collectible
+
+            // used to randomize the drop rate
+            /*
             float dropSelect = Random.Range(0, 100f); // random number between 0 and 100
 
             if(dropSelect <= chanceToDrop)
             {
                 Instantiate(collectible, other.transform.position, other.transform.rotation); // drop the collectible
             }
+            */
 
             AudioManager.instance.PlaySFX(3); // the number passed is the number in the inspector window, so Element 3 is Enemy Explode
         }
