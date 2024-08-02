@@ -267,7 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a15dbaea294dcbd44893cdd2782df220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelSelect: 
+  levelSelect: Level_Select
   mainMenu: Main_Menu
   pauseScreen: {fileID: 6981219062091984886}
   isPaused: 0
@@ -592,7 +592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitToRespawn: 2
   emeraldsCollected: 0
-  levelToload: Main_Menu
+  levelToload: Level_Select
 --- !u!1 &5197630928015850314
 GameObject:
   m_ObjectHideFlags: 0

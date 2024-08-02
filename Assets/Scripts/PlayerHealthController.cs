@@ -94,4 +94,23 @@ public class PlayerHealthController : MonoBehaviour
         UIController.instance.UpdateHealthDisplay(); // update our health being shown on the top right of the screen by calling th UpdateHealthDisplay in UIController script
     }
 
+    // enter collision area
+    private void OnCollisionEnter2D(Collision2D other) 
+    {
+        // if the gameobject the player has collided with has the tag of Platform
+        if(other.gameObject.tag == "Platform")
+        {
+            transform.parent = other.transform; // set the platform to be the parent of the player, letting us stay on it while its moving
+        }
+    }
+
+    // exit collision area 
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        // if the gameobject the player has exited collision with has the tag of Platform
+        if (other.gameObject.CompareTag("Platform"))
+        {
+            transform.parent = null; // unparent the player from the platform
+        }
+    }
 }

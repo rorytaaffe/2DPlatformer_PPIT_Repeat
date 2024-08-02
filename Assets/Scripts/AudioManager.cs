@@ -36,4 +36,10 @@ public class AudioManager : MonoBehaviour
 
         soundEffects[soundToPlay].Play(); // passing an int value into the soundEffects array, .Play will play the sound
     }
+
+    public void PlayLevelVictory()
+    {
+        backGroundMusic.Stop(); // stop background music
+        levelEndMusic.Play(); // play level end music
+    }
 }

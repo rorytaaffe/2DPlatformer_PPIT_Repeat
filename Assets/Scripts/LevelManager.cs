@@ -64,13 +64,17 @@ public class LevelManager : MonoBehaviour
     // Coroutine, special function that performs time-based operations, runs on its own time outside the other normal functions , asynchronous so it runs independently from the main program flow
     public IEnumerator EndLevelCo()
     {
+    AudioManager.instance.PlayLevelVictory(); // play level victory music
+
        PlayerController.insance.stopInput = true; // as soon as we hit the flag stop input
 
        CameraController.instance.stopFollow = true; // tell the camera to stop following the player
 
        UIController.instance.levelCompleteText.SetActive(true); // put level complete text on screen
 
-       yield return new WaitForSeconds(3.5f); // yield return is waiting for a value to be true, the value its waiting for is 3.5 seconds
+       yield return new WaitForSeconds(4f); // yield return is waiting for a value to be true, the value its waiting for is 4 seconds, the game stays on the level complete screen for 4 seconds
+
+       PlayerPrefs.SetString("CurrentLevel", SceneManager.GetActiveScene().name); // combines CurrentLevel with the actual name of the current level into one string
 
        SceneManager.LoadScene(levelToload); // load the specified scene
     }

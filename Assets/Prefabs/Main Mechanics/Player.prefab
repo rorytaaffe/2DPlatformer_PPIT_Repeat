@@ -168,10 +168,11 @@ MonoBehaviour:
   groundCheckPoint: {fileID: 9176309622971919181}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1280
   knockBackLength: 0.25
   knockBackPower: 5
   bouncePower: 15
+  stopInput: 0
 --- !u!114 &5545172533274811092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -430,4 +431,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 5786537875034328996, guid: 152f2a3ae5db2e2409edcd60b30fb10d, type: 3}
   collectible: {fileID: 2295497209318444129, guid: 754b919c42090194c9b2ecfb190a7fc8, type: 3}
-  chanceToDrop: 50

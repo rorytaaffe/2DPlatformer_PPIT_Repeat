@@ -793,6 +793,14 @@ PrefabInstance:
       propertyPath: m_Text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4142780416676283228, guid: f376493385c76cc40b18cdb0ee23d6dc, type: 3}
+      propertyPath: levelSelect
+      value: Level_Select
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209363113314901587, guid: f376493385c76cc40b18cdb0ee23d6dc, type: 3}
+      propertyPath: levelToload
+      value: Level_Select
+      objectReference: {fileID: 0}
     - target: {fileID: 4421920283859032557, guid: f376493385c76cc40b18cdb0ee23d6dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.43

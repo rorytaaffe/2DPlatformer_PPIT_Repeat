@@ -9,6 +9,8 @@ public class LSPlayer : MonoBehaviour
     public float moveSpeed = 10f; // how fast the player will move
     private bool levelLoading; // used to check if we are loading a level
 
+    public LSManager theManager; // public LSManager reference variable called theManager
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,13 +66,15 @@ public class LSPlayer : MonoBehaviour
                 }
             }
 
-            // if our current point is at a level
-            if(currentPoint.isLevel)
+            // if our current point is at a level && levelToLoad isnt empty
+            if(currentPoint.isLevel && currentPoint.levelToLoad != "")
             {
                 // if the player presses the jump button
                 if(Input.GetButtonDown("Jump"))
                 {
                     levelLoading = true; // loading a level = true
+
+                    theManager.LoadLevel(); // calls LoadLevel() in LSManager
                 }
             }
         }
@@ -80,5 +84,7 @@ public class LSPlayer : MonoBehaviour
     public void SetNextPoint(MapPoint nextPoint)
     {
         currentPoint = nextPoint; // set current map point to the next point
+
+        AudioManager.instance.PlaySFX(5); // map movement audio source, element 5 in unity
     }
 }

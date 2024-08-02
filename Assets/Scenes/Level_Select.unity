@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 403343728634314364, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: m_Name
-      value: Map Point 1-5
+      value: Map Point L5
       objectReference: {fileID: 0}
     - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: up
@@ -141,6 +141,14 @@ PrefabInstance:
     - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: isLevel
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
+      propertyPath: isLocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
+      propertyPath: levelToCheck
+      value: Level_4
       objectReference: {fileID: 0}
     - target: {fileID: 4511994517264198873, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: m_LocalPosition.x
@@ -213,7 +221,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 403343728634314364, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: m_Name
-      value: Map Point 1-6
+      value: Map Point L6
       objectReference: {fileID: 0}
     - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: down
@@ -222,6 +230,14 @@ PrefabInstance:
     - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: isLevel
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
+      propertyPath: isLocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
+      propertyPath: levelToCheck
+      value: Level_5
       objectReference: {fileID: 0}
     - target: {fileID: 4511994517264198873, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: m_LocalPosition.x
@@ -284,6 +300,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4511994517264198873, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
   m_PrefabInstance: {fileID: 215982926}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &454383456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 454383458}
+  - component: {fileID: 454383457}
+  m_Layer: 0
+  m_Name: LS Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &454383457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454383456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26506414eee9baf4cba204c6e3d3f76e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thePlayer: {fileID: 1936129348}
+--- !u!4 &454383458
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454383456}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.70721215, y: -1.9183693, z: -0.10474061}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &463979852
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -460,7 +521,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 403343728634314364, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: m_Name
-      value: Map Point 1-4
+      value: Map Point L4
       objectReference: {fileID: 0}
     - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: down
@@ -473,6 +534,14 @@ PrefabInstance:
     - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: isLevel
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
+      propertyPath: isLocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
+      propertyPath: levelToCheck
+      value: Level_3
       objectReference: {fileID: 0}
     - target: {fileID: 4511994517264198873, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: m_LocalPosition.x
@@ -949,7 +1018,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 403343728634314364, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: m_Name
-      value: Map Point 1-3
+      value: Map Point L3
       objectReference: {fileID: 0}
     - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: left
@@ -962,6 +1031,14 @@ PrefabInstance:
     - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: isLevel
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
+      propertyPath: isLocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
+      propertyPath: levelToCheck
+      value: Level_2
       objectReference: {fileID: 0}
     - target: {fileID: 4511994517264198873, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1352,6 +1429,119 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4511994517264198873, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
   m_PrefabInstance: {fileID: 1286897854}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1404397480
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 93247668697670764, guid: c821fea5df8082a42aaf921699732336, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443564790048061792, guid: c821fea5df8082a42aaf921699732336, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681959095711597459, guid: c821fea5df8082a42aaf921699732336, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1895917035349931091, guid: c821fea5df8082a42aaf921699732336, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956497428217564600, guid: c821fea5df8082a42aaf921699732336, type: 3}
+      propertyPath: m_Name
+      value: Audio Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096085247788230206, guid: c821fea5df8082a42aaf921699732336, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228004592576983107, guid: c821fea5df8082a42aaf921699732336, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398440015863100982, guid: c821fea5df8082a42aaf921699732336, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 45.957806
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398440015863100982, guid: c821fea5df8082a42aaf921699732336, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.6172853
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398440015863100982, guid: c821fea5df8082a42aaf921699732336, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.5071774
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398440015863100982, guid: c821fea5df8082a42aaf921699732336, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398440015863100982, guid: c821fea5df8082a42aaf921699732336, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398440015863100982, guid: c821fea5df8082a42aaf921699732336, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398440015863100982, guid: c821fea5df8082a42aaf921699732336, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398440015863100982, guid: c821fea5df8082a42aaf921699732336, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398440015863100982, guid: c821fea5df8082a42aaf921699732336, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398440015863100982, guid: c821fea5df8082a42aaf921699732336, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4438086935935831171, guid: c821fea5df8082a42aaf921699732336, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6298757782766321838, guid: c821fea5df8082a42aaf921699732336, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7117363117748358054, guid: c821fea5df8082a42aaf921699732336, type: 3}
+      propertyPath: backGroundMusic
+      value: 
+      objectReference: {fileID: 2107268300}
+    - target: {fileID: 7135434738410746025, guid: c821fea5df8082a42aaf921699732336, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141600578175902669, guid: c821fea5df8082a42aaf921699732336, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176056882488016695, guid: c821fea5df8082a42aaf921699732336, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8984080855109509652, guid: c821fea5df8082a42aaf921699732336, type: 3}
+      propertyPath: m_Volume
+      value: 0.075
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029426786931480239, guid: c821fea5df8082a42aaf921699732336, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c821fea5df8082a42aaf921699732336, type: 3}
 --- !u!1001 &1533832087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11881,6 +12071,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPoint: {fileID: 7288243191999623055}
   moveSpeed: 15
+  theManager: {fileID: 454383457}
 --- !u!212 &1936129349
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11958,7 +12149,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 403343728634314364, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: m_Name
-      value: Map Point 1-7
+      value: Map Point L7
       objectReference: {fileID: 0}
     - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: right
@@ -11967,6 +12158,14 @@ PrefabInstance:
     - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: isLevel
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
+      propertyPath: isLocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
+      propertyPath: levelToCheck
+      value: Level_6
       objectReference: {fileID: 0}
     - target: {fileID: 4511994517264198873, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12185,7 +12384,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cd314f7a16f19fc44a359fdf4811fb19, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.4
+  m_Volume: 0.075
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -12294,7 +12493,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 403343728634314364, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: m_Name
-      value: Map Point 1-2
+      value: Map Point L2
       objectReference: {fileID: 0}
     - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: down
@@ -12307,6 +12506,18 @@ PrefabInstance:
     - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: isLevel
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
+      propertyPath: isLocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
+      propertyPath: levelToLoad
+      value: Level_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
+      propertyPath: levelToCheck
+      value: Level_1
       objectReference: {fileID: 0}
     - target: {fileID: 4511994517264198873, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12379,7 +12590,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 403343728634314364, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: m_Name
-      value: Map Point 1-1
+      value: Map Point L1
       objectReference: {fileID: 0}
     - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: down
@@ -12388,6 +12599,14 @@ PrefabInstance:
     - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: isLevel
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
+      propertyPath: levelToLoad
+      value: Level_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
+      propertyPath: levelToCheck
+      value: Level_1
       objectReference: {fileID: 0}
     - target: {fileID: 4511994517264198873, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12459,3 +12678,5 @@ SceneRoots:
   - {fileID: 784028073}
   - {fileID: 1936129350}
   - {fileID: 2107268301}
+  - {fileID: 454383458}
+  - {fileID: 1404397480}
