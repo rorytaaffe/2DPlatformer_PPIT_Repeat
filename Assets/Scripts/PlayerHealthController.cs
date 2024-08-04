@@ -110,7 +110,16 @@ public class PlayerHealthController : MonoBehaviour
         // if the gameobject the player has exited collision with has the tag of Platform
         if (other.gameObject.CompareTag("Platform"))
         {
-            transform.parent = null; // unparent the player from the platform
+            //transform.parent = null; // unparent the player from the platform // this was giving me compile issues
+
+            // Delay the parenting operation to avoid activation/deactivation issues
+            Invoke("RemoveParent", 0.1f);
+
         }
+    }
+
+    void RemoveParent()
+    {
+        transform.SetParent(null); // remove object from parent, player from moving platform 
     }
 }

@@ -13,7 +13,10 @@ public class MovingPlatform : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (points.Length > 0 && platform != null)
+        {
+            platform.position = points[0].position; // Set the platform to the first point's position
+        }
     }
 
     // Update is called once per frame

@@ -147,6 +147,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
+      propertyPath: levelToLoad
+      value: Level_5
+      objectReference: {fileID: 0}
+    - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: levelToCheck
       value: Level_4
       objectReference: {fileID: 0}
@@ -234,6 +238,10 @@ PrefabInstance:
     - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: isLocked
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
+      propertyPath: levelToLoad
+      value: Level_6
       objectReference: {fileID: 0}
     - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: levelToCheck
@@ -538,6 +546,10 @@ PrefabInstance:
     - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: isLocked
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
+      propertyPath: levelToLoad
+      value: Level_4
       objectReference: {fileID: 0}
     - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: levelToCheck
@@ -1035,6 +1047,10 @@ PrefabInstance:
     - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: isLocked
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
+      propertyPath: levelToLoad
+      value: Level_3
       objectReference: {fileID: 0}
     - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: levelToCheck
@@ -12162,6 +12178,10 @@ PrefabInstance:
     - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: isLocked
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
+      propertyPath: levelToLoad
+      value: Level_7
       objectReference: {fileID: 0}
     - target: {fileID: 915825890228976516, guid: 04478b658eb8d7e43a4eb6ac0fcb5e98, type: 3}
       propertyPath: levelToCheck
