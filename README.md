@@ -1,8 +1,8 @@
 # IMPORTANT <br>
-Finished Project is in the MASTER branch.     
+Finished Project is in the **MASTER** branch.     
 Had problems committing to MAIN branch halfway through development of Project.  
 The final commit on the MAIN branch is NOT the finished Project.   
-Commit history starts in MAIN but finishes in MASTER. <br> 
+Commit history starts in MAIN but finishes in **MASTER**. <br> 
 
 ---
 <br> <br>
