@@ -60,7 +60,7 @@ To run the game locally, follow these steps:
 Once the project is opened in Unity, you can play the game by following these steps: <br>
 - In the Unity Editor: <br>
 `Click on the Scenes folder in the Project window.` <br>
-`Open the MainMenu scene.` <br>
+`Open the Main_Menu scene.` <br>
 `Press the Play button in the Unity Editor to start the game.` <br><br>
 
 - Build the Game: <br>
