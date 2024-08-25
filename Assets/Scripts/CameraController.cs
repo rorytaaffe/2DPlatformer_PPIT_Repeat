@@ -32,13 +32,6 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
-
-        float clampedY = Mathf.Clamp(transform.position.y, minHeight, maxHeight); // makes sure if clampedY(transform.position.y) goes above or below the min/max height we set in Unity, it will reset the current height to be within those parameters
-        transform.position = new Vector3(transform.position.x, clampedY, transform.position.z);
-        */
-
         // if we want the camera to follow the player
         if(!stopFollow)
         {

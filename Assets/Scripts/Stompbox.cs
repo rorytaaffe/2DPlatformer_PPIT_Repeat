@@ -38,16 +38,6 @@ public class Stompbox : MonoBehaviour
 
             Instantiate(collectible, other.transform.position, other.transform.rotation); // drop the collectible
 
-            // used to randomize the drop rate
-            /*
-            float dropSelect = Random.Range(0, 100f); // random number between 0 and 100
-
-            if(dropSelect <= chanceToDrop)
-            {
-                Instantiate(collectible, other.transform.position, other.transform.rotation); // drop the collectible
-            }
-            */
-
             AudioManager.instance.PlaySFX(3); // the number passed is the number in the inspector window, so Element 3 is Enemy Explode
         }
 
