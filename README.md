@@ -70,7 +70,7 @@ Once the project is opened in Unity, you can play the game by following these st
 
 <br><br>
 ## 6. Contact <br>
-For any questions or suggestions, feel free to contact me at `G00332281@atu.ie`
+For any questions or suggestions, feel free to contact me at `rory.taaffe11@gmail.com`
 
 
 
